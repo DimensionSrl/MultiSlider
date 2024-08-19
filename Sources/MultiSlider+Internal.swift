@@ -215,7 +215,7 @@ extension MultiSlider {
         valueLabels[i].text = valueLabelText(i, labelValue: labelValue)
         if thumbsCustomAccessibility {
             let stringValue = "\(NSNumber(value: Double(labelValue)))"
-            thumbViews[i].accessibilityValue = "\(customAccessibilityPrefixes[i])" + stringValue
+            thumbViews[i].accessibilityValue = !customAccessibilityPrefixes.isEmpty ? "\(customAccessibilityPrefixes[i])" + stringValue : stringValue
         }
     }
 
